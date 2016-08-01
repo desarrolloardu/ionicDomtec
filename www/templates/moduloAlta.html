@@ -1,0 +1,30 @@
+<ion-view view-title="ModuloAlta">
+  <ion-content>
+    <h1>Alta Modulo</h1>
+	
+	<md-input-container>
+        <label>Descripcion</label>
+        <input ng-model="ma.descripcion">
+    </md-input-container>
+	
+	<md-input-container>
+        <label>UUID</label>
+        <input ng-model="ma.uuid">
+    </md-input-container>
+	
+	<md-input-container>
+        <label>Clave</label>
+        <input ng-model="ma.clave">
+    </md-input-container>
+	
+	<md-select ng-model="ma.selectTipo">
+          <md-option ng-repeat="it in ma.lista" value="{{it.descripcion}}">
+            {{it.descripcion}}
+          </md-option>
+        </md-select>
+	  
+	<md-button ng-click="ma.alta()" class="md-raised">Guardar</md-button>
+	
+  </ion-content>
+</ion-view>
+ 
